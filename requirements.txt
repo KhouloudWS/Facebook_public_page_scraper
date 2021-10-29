@@ -1,0 +1,4 @@
+FastAPI[All]
+facebook_scraper
+datetime
+pymongo
