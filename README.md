@@ -1,6 +1,7 @@
 # Facebook_public_page_scraper
 A dockerized facebook scrapping service using fastAPI
 
+
 * This project is an API meant to scrape posts from Facebook public pages using either page id or page name then store the posts into a mongo-db database. Posts have a unique ID named post_id in the database and can be a good way to identify posts in the database. 
 * The API is built using fastAPI, the Facebook scraping functionality is thanks to facebook_scraper python library, and the connection to mango-db is made by pymongo. 
 * This repository contains a requirement.txt file that contains the required python libraries needed for this project, a main.py containing the project's code, and a Dockerfile that can be used to build a docker for the API.
@@ -24,7 +25,8 @@ This will create a docker with a mongo-db database, you can fill the dataset wit
 
 ## Guide
 This is a quick guide for using the API routes that are made in the script:
-* /scrap/ : This route is used for scraping data from Facebook and storing it in the database, please give it the following arguments:
+
+/scrap/ : This route is used for scraping data from Facebook and storing it in the database, please give it the following arguments:
 * page : page_id or page_name
 * limit (optional, default=2): limit the number of pages of posts to scrape from that page (preferably limit >1 because a lower value might give no results depending on the page)
 * save (optional, default=False): if True, the scraped posts would be saved in the database, otherwise they would be just shown on the screen.
@@ -55,4 +57,6 @@ The above request would find the post with the id 2657553427872738 in the databa
 http://localhost:8000/load/?page_id=742359879214163
 
 This request would give you all posts of the page having page_id=742359879214163
+
+
 
